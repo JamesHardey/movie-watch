@@ -1,5 +1,7 @@
 package com.example.moviewatch.util;
 
+import com.example.moviewatch.dto.CreateEpisodeDTO;
+import com.example.moviewatch.dto.CreateMovieDTO;
 import com.example.moviewatch.dto.EpisodeDTO;
 import com.example.moviewatch.dto.MovieDTO;
 import com.example.moviewatch.model.Episode;
@@ -28,6 +30,15 @@ public class MovieMapper {
         )).collect(Collectors.toList()));
 
         return movieDTO;
+    }
+
+    public static  Movie mapToEntity(CreateMovieDTO movieDTO){
+        Movie movie = new Movie();
+        movie.setTitle(movieDTO.getTitle());
+        movie.setYoutubeUrl(movieDTO.getYoutubeUrl());
+        movie.setImageUrl(movieDTO.getImageUrl());
+        movie.setDescription(movieDTO.getDescription());
+        return movie;
     }
 
 
@@ -69,6 +80,15 @@ public class MovieMapper {
         episode.setEpisodeNumber(episodeDTO.getEpisodeNumber());
         episode.setDownloadUrl(episodeDTO.getDownloadUrl());
         episode.setUploadedAt(episodeDTO.getUploadedAt());
+        return episode;
+    }
+
+
+    public static Episode mapToEntity(CreateEpisodeDTO episodeDTO){
+        Episode episode = new Episode();
+        episode.setTitle(episodeDTO.getTitle());
+        episode.setEpisodeNumber(episodeDTO.getEpisodeNumber());
+        episode.setDownloadUrl(episodeDTO.getDownloadUrl());
         return episode;
     }
 

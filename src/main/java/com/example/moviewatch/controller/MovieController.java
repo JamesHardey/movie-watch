@@ -1,7 +1,11 @@
 package com.example.moviewatch.controller;
 
+import com.example.moviewatch.dto.CreateEpisodeDTO;
+import com.example.moviewatch.dto.CreateMovieDTO;
+import com.example.moviewatch.dto.EpisodeDTO;
 import com.example.moviewatch.dto.MovieDTO;
 import com.example.moviewatch.service.MovieService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/movies")
+@Slf4j
 public class MovieController {
 
     private MovieService movieService;
@@ -36,7 +41,7 @@ public class MovieController {
 
     // Method to save a movie
     @PostMapping
-    public ResponseEntity<MovieDTO> saveMovie(@RequestBody MovieDTO movieDTO) {
+    public ResponseEntity<MovieDTO> saveMovie(@RequestBody CreateMovieDTO movieDTO) {
         MovieDTO movie = movieService.saveMovie(movieDTO);
         return new ResponseEntity<>(movie, HttpStatus.CREATED);
     }
@@ -45,6 +50,14 @@ public class MovieController {
     @PutMapping("/{id}")
     public ResponseEntity<MovieDTO> updateMovie(@PathVariable Integer id, @RequestBody MovieDTO movieDTO) {
         MovieDTO movie = movieService.updateMovie(id, movieDTO);
+        return new ResponseEntity<>(movie, HttpStatus.OK);
+    }
+
+
+    @PutMapping("/{movieId}/episodes")
+    public ResponseEntity<MovieDTO> addEpisodeToMovie(@PathVariable Integer movieId, @RequestBody List<CreateEpisodeDTO> episodesDTO) {
+        System.out.println(movieId);
+        MovieDTO movie = movieService.addEpisodeToMovie(movieId, episodesDTO);
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
 

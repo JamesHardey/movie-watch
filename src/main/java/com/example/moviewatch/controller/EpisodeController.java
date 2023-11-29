@@ -1,3 +1,4 @@
+/*
 package com.example.moviewatch.controller;
 
 
@@ -56,3 +57,4 @@ public class EpisodeController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
+*/
