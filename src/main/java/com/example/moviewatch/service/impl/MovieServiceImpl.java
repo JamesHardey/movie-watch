@@ -89,7 +89,6 @@ public class MovieServiceImpl implements MovieService {
         episodesDTO
                 .forEach(episode -> {
                     Episode episode1 = episodeRepository.save(MovieMapper.mapToEntity(episode));
-                    episode1.setUploadedAt(dateNow);
                     movie.getEpisodes().add(episode1);
                 });
         movie.setUpdatedAt(dateNow);
