@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.moviewatch.MovieWatchApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-29T12:25:38" hostname="DESKTOP-6RL6VT6" time="1.705">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.example.moviewatch.MovieWatchApplicationTests" time="1.705"/>
+  <system-out><![CDATA[04:25:25.898 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.moviewatch.MovieWatchApplicationTests]: MovieWatchApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+04:25:26.166 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.moviewatch.MovieWatchApplication for test class com.example.moviewatch.MovieWatchApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2023-11-29T04:25:27.166-08:00  INFO 4972 --- [    Test worker] c.e.m.MovieWatchApplicationTests         : Starting MovieWatchApplicationTests using Java 17.0.8 with PID 4972 (started by HP in C:\Users\HP\Documents\movie-watch\movie-watch)
+2023-11-29T04:25:27.171-08:00  INFO 4972 --- [    Test worker] c.e.m.MovieWatchApplicationTests         : No active profile set, falling back to 1 default profile: "default"
+2023-11-29T04:25:29.107-08:00  INFO 4972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-29T04:25:29.304-08:00  INFO 4972 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 2 JPA repository interfaces.
+2023-11-29T04:25:30.597-08:00  INFO 4972 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-29T04:25:30.785-08:00  INFO 4972 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2023-11-29T04:25:30.895-08:00  INFO 4972 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2023-11-29T04:25:31.455-08:00  INFO 4972 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-29T04:25:31.521-08:00  INFO 4972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-29T04:25:32.038-08:00  INFO 4972 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./testdb user=SA
+2023-11-29T04:25:32.043-08:00  INFO 4972 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-29T04:25:32.116-08:00  WARN 4972 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-29T04:25:34.571-08:00  INFO 4972 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-29T04:25:34.669-08:00  INFO 4972 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-29T04:25:36.664-08:00  WARN 4972 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-29T04:25:38.209-08:00  INFO 4972 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:./testdb'
+2023-11-29T04:25:38.650-08:00  INFO 4972 --- [    Test worker] c.e.m.MovieWatchApplicationTests         : Started MovieWatchApplicationTests in 11.99 seconds (process running for 15.164)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
